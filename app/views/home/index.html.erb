@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+<div class="jumbotron text-center" style="margin-right:300">
+<div class="left air" align=center>
+<h1 class="display-4"><strong> WEATHER </strong></h1>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 1400px;
+    height: 400px;
+  }
+  </style>
+</head>
+<body>
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <%= image_tag("picture/earth.gif",:size => "460x280")%>
+    </div>
+    
+    <div class="carousel-item">
+    <%= image_tag("picture/cost.jpeg",:size => "460x280")%>
+    </div>
+  </div>
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+<h1 class="display-4"><strong>Air Quality Details </strong></h1>
+<h1 class="lead"><strong>AQI : <%= @final_output %></strong></h1>
+  <h1 class="lead"><strong>ReportingArea : <%= @area %></strong></h1>
+  <a class="btn btn-primary btn-lg" href="#" role="button" id=<%= @color %>>Category:<%= @final %></a>
+  <a class="btn btn-primary btn-lg" href="https://docs.airnowapi.org/login">For More</a></p>
+
+</body>
+
+  </div>
+  </html>
+
